@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>條件、迴圈</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="js/solid.js"></script>
+    <script defer src="js/fontawesome.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Python基礎課程</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">課程簡介</a>
+                </li>
+                <li>
+                    <a href="basics.html">變數、資料類型與運算子</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">程式語法</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="syntaxinout.html">語法、輸入與輸出</a>
+                        </li>
+                        <li>
+                            <a href="condloop.html">條件、迴圈</a>
+                        </li>
+                        <li>
+                            <a href="function.html">函數</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <h2>條件</h2>
+            <p>當使用者需要依據條件來執行對應的動作時，我們就必須使用條件，請注意不管是條件、迴圈或是函數，在命令之後都必須加上 : 代表該命令區塊開始，在 : 下有相同縮排位置的命令則屬於該區塊，Python條件式包含如下：</p>
+            <p><div class="codeblock">
+                <pre><code>if (2==2): print("2=2")  //僅包含條件對的動作，if條件之後必須加 :</code></pre>
+            </div></p>
+            <p><div class="codeblock">
+                <pre><code>if (2>2):
+    print("2>2")  //包含條件對的動作，if條件之後必須加 :
+elif (2==2):
+    print("2=2")  //當elif之前的條件都不成立時的動作，elif之後必須加 :</code></pre>
+            </div></p>
+            <p><div class="codeblock">
+                <pre><code>if (2>2):
+    print("2>2")  //包含條件對的動作，if條件之後必須加 :
+elif (2!=2):
+    print("2!=2")
+else:
+    print("2=2")  //包含條件錯的動作，else之後必須加 :</code></pre>
+            </div></p>
+            
+            <div class="line"></div>
+
+            <h2>迴圈</h2>
+            <p>當程式重複執行某些動作可使用迴圈命令，Python迴圈命令包含 for 與 while。<a href="https://medium.com/ccclub/ccclub-python-for-beginners-tutorial-4990a5757aa6" target="_blank">迴圈參考資料</a></p>
+            <p>for迴圈用法下列範例，使用方法為 for 變數 in 清單: ，他會將清單變數中的每各項目都執行依次，for迴圈最常搭配的清單函數為 range，range函數常用使用方式為 range(數字)、range(起始值,終止值)與range(起始值,終止值,間距值)。請注意range函數產生值不包含終止值。</p>
+            <p><div class="codeblock">
+                <pre><code>print(range(10)) //印出1,2,3..,9
+print(range(5,10))  //印出5,6,7,8,9      
+print(range(1,10,2))  //印出1,3,5,7,9</code></pre>
+            </div></p>
+            <p><div class="codeblock">
+                <pre><code>a=0
+for i in range(1,10):  //i值從1到9      
+    a=a+i  //將i加入a
+print(a)</code></pre>
+            </div></p>
+            <p><div class="codeblock">
+                <pre><code>a=0
+i=1
+while (i&lt;10):  //i值從1到9      
+    a=a+i  //將i加入a
+    i=i+1
+print(a)</code></pre>
+            </div></p>
+
+            <div class="line"></div>
+
+            <h2>練習題(沒有迴圈)</h2>
+            <p>E-Tutor基本題目專區第3題。一行包含兩個輸入值，因此必須使用input().split(' ')。本題會使用開根號，Python開根號為math.sqrt()函數，平面座標兩點距離公式為math.sqrt((x<sub>1</sub>-x<sub>2</sub>)<sup>2</sup>+y<sub>1</sub>-y<sub>2</sub>)<sup>2</sup>)。</p>
+            <div class="line"></div>
+            <p>E-Tutor基本題目專區第6題。一行包含一個輸入值，因此使用input()。</p>
+            <div class="line"></div>
+            <p>E-Tutor基本題目專區第30題。一行包含兩個輸入值，因此必須使用input().split(' ')。</p>
+            <div class="line"></div>
+            <p>E-Tutor基本題目專區第34題。一行包含兩個輸入值，因此必須使用input().split(' ')。</p>
+            <div class="line"></div>
+            <p>E-Tutor基本題目專區第36題。一行包含一個輸入值，因此使用input()。計算餘數運算子為 %</p>
+            <div class="line"></div>
+            <p>E-Tutor基本題目專區第38題。一行包含一個輸入值，因此使用input()。題目會印出兩行，會使用輸出跳行符號 \n</p>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
